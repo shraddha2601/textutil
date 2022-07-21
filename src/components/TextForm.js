@@ -3,7 +3,6 @@ import React, {useState} from 'react'
 export default function TextForm(props) {
   const [text,setText] = useState('Enter Text Here');
   const handleUpClick = () =>{
-    // console.log("UpperCase Was Clicked" + text);
     let newText = text.toUpperCase();
     setText(newText)
     props.showAlert("Converted to Uppercase","success")
@@ -11,10 +10,8 @@ export default function TextForm(props) {
   }
 
   const handleOnChange = (event) =>{
-    // console.log("on Change");
     setText(event.target.value)
   }
-  // setText("New Text");       
   return (
     <div>
       <div className="container" style={{color : props.mode==='dark' ? 'white' : 'black'}}>
