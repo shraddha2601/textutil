@@ -23,9 +23,9 @@ export default function Navbar(props) {
           <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
           <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form> */}
-        <div className="custom-control custom-switch">
+        <div className={`custom-control custom-switch text-${props.mode==='light' ? 'dark' : 'light'}`}>
           <input type="checkbox" onClick={props.toggleMode} className="custom-control-input" id="customSwitch1"/>
-          <label className="custom-control-label text-light" htmlFor="customSwitch1">Enable Dark Mode</label>
+          <label className="custom-control-label" htmlFor="customSwitch1">Enable Dark Mode</label>
         </div>
       </div>
     </nav>
